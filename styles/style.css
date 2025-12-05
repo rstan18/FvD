@@ -5,8 +5,18 @@
   box-sizing:border-box;  
 }
 
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#000;
+}
+
+
 body {
-	background-color: black;
+	background: transparent;
 	color: aliceblue;
 	margin: 0;
 	padding: 0;
@@ -18,7 +28,7 @@ display: flex;
 justify-content: left;
 align-items: center;
 height: 5vh;
-background-color: black; 
+background-color: var(--color-background); 
 
 }
 
@@ -30,46 +40,72 @@ display: none;
 }
 
 header img {
-
-height: 2.5em;
-width: 8em;
-
+width: 33%
 }
 
-video {
-position: fixed;
-right: 0;
-bottom: 0;
-min-width: 100%;
-min-height: 100%;
-z-index: -1;
+
+
+.video-bg {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+.video-bg video {
+	  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+/* position: absolute;
+width: 100%;
+height: 500%;
 object-fit: cover;
-
+    box-sizing: border-box;
+    top: 5%; */
 }
+
 
 section:nth-of-type(1) img {
-	padding-top: 15em;
+	
+	position: absolute;
+	top: 50%;
+	z-index: 1000;
+	height: 8%;
+	left: 8%;
+	/* padding-top: 50%;
 	padding-bottom: 30em;
 	display: block;
 	margin: auto;
-	width: auto;
+	width: auto; */
 }
 
+section:nth-of-type(1) h2 {
+	display: none;
+}
 
 h2, h3, h4, h5, p, a, li {
 	text-align: center;
-
-
-
 }
 
-footer {
+table, th, td {
+border: 0.1em solid var(--color-background);
+	text-align: center;
+	background-color: var(--color-background);
+}
 
+
+footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 20em;
-	background-color: black;
+	height: 20%;
+	background-color: var(--color-background);
 }
 
 a footer {
@@ -78,35 +114,27 @@ text-align: center;
 }
 
 footer img {
-width: 5em;
-height: 5em;
+width: 10%;
 display: block;
 margin: auto;
-width: 50%;
 justify-content: center;
 align-items: center;
 }
 
-section {
+
+/* section {
 padding: 1em 2em;
-
-
-}
+} */
 
 main section:nth-of-type(2) h2 {
 font-weight: 60;
 	font-size: 2.5em;
-
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 padding-bottom: 1em;
-
 }
 
 main section:nth-of-type(2) img {
-
 	width: 90%;
-
 }
 
 
@@ -115,30 +143,23 @@ main section:nth-of-type(2) ul {
 list-style: none;
   padding: 0;
   margin: 0;
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   align-items: start;
-
 }
 
 main section:nth-of-type(3) ul {
 list-style: none;
 }
 
-
 main section:nth-of-type(4) ul {
-
 	list-style: none;
 	margin: 0;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(1, 1fr);
 	justify-items: center;
 	align-items: start;
-	
-
-
 }
 
 main section:nth-of-type(4) img {
@@ -146,38 +167,11 @@ main section:nth-of-type(4) img {
 	justify-items: center;
 	padding-bottom: 13em;
 	margin-bottom: 8em;
-	background-color: black;
-	
+	background-color: var(--color-background);
 }
 
 main section:nth-of-type(5) ul {
-
 	list-style: none;
-}
-
-
-	@media (max-width: 60em) {
-  main section:nth-of-type(2) ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-	}
-
-@media (max-width: 40em) {
-  main section:nth-of-type(2) ul {
-    grid-template-columns: 1fr;
-  
-}
-}
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
 }
 
 
